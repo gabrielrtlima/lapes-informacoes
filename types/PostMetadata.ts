@@ -4,4 +4,5 @@ export type PostMetadata = {
   subtitle: string;
   heroImg?: string;
   slug: string;
+  project?: string;
 };

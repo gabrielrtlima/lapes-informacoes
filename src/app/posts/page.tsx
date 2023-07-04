@@ -56,8 +56,9 @@ export default function Posts() {
   return (
     <main>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <Link
+            key={index}
             href={`projetos/${post.project}/${post.slug}`}
             className="border rounded-l px-4 py-2"
           >
