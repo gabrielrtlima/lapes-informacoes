@@ -11,7 +11,6 @@ export const Header = () => {
             </h2>
           </a>
           <div className="flex items-center gap-6 ">
-            <Link href="/">Sobre</Link>
             <Link href="/posts">Posts</Link>
           </div>
           <div className="flex-1">
