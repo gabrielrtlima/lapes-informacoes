@@ -10,9 +10,9 @@ export const Header = () => {
               LAPES
             </h2>
           </a>
-          <div className="items-center gap-6 hidden md:flex">
+          <div className="flex items-center gap-6 ">
             <Link href="/">Sobre</Link>
-            <Link href="/">Projetos</Link>
+            <Link href="/posts">Posts</Link>
           </div>
           <div className="flex-1">
           </div>

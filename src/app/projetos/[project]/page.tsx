@@ -48,7 +48,6 @@ export default function Project(props: any) {
             <h1 className="font-mono text-lg font-bold">{post.title}</h1>
             <span className="text-xs font-light">{post.date}</span>
             <h2 className="text-sm text-zinc-500">{post.subtitle}</h2>
-            <p>{post.slug}</p>
           </Link>
         ))}
       </section>
