@@ -7,9 +7,10 @@ const themes = ["light", "dark"];
 export const ThemeToggleButton = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [theme, setTheme] = useState(() => {
-    if (window.location.href === undefined) {
+    if (typeof window === "undefined") {
       return null;
     }
+
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
     }

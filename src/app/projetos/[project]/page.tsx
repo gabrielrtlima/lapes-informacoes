@@ -38,8 +38,9 @@ export default function Project(props: any) {
         </h1>
       </div>
       <section className="py-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <Link
+            key={index}
             href={`/projetos/${project}/${post.slug}`}
             className="flex flex-col px-4 py-2 border rounded-lg border-zinc-700"
           >

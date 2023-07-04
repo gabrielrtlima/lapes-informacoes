@@ -23,8 +23,9 @@ export default function Home() {
           Projetos:
         </h1>
         <div className="pt-5 grid grid-cols-1 justify-items-center md:grid-cols-2 gap-6">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Link
+              key={index}
               href={`/projetos/${project}`}
             >
               <div className="flex items-center justify-center py-2 min-w-[200px] border rounded-md border-zinc-600 cursor-pointer hover:brightness-75 transition-all duration-100">
