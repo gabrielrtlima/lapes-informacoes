@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { MasterHead } from "./components/MasterHead";
 import fs from "fs";
+import path from "path";
 
 const getProjects = () => {
-  const path = "posts/";
-  const readDir = fs.readdirSync(path);
+  // const path = "posts/";
+  const pathDir = path.join(process.cwd(), "posts/");
+  const readDir = fs.readdirSync(pathDir);
   const directories = readDir.filter((item) => {
-    const stat = fs.statSync(`${path}${item}`);
+    const stat = fs.statSync(`${pathDir}${item}`);
     return stat.isDirectory();
   });
 

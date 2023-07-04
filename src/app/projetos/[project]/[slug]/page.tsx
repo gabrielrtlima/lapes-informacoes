@@ -1,17 +1,17 @@
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
+import path from "path";
 
 const getPostContent = (dirPost: string) => {
-  const folder = "posts/";
-  const file = `${folder}${dirPost}.md`;
+  const pathDir = path.join(process.cwd(), "posts/");
+  const file = `${pathDir}${dirPost}.md`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
   return matterResult.content;
 };
 
 export default function Post(props: any) {
-  console.log(props);
   const dirPost = `${props.params.project}/${props.params.slug}`;
   const post = getPostContent(dirPost);
   return (
